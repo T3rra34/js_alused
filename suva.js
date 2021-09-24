@@ -28,7 +28,7 @@ suva = surname[0];
 suva = surname indexof("e");
 suva = surname LastIndexof("a");
 
-suva = surname.charAt
+//suva = surname.charAt
 
 suva = surname.slice(-3);
 

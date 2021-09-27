@@ -28,7 +28,7 @@ if (id > 100) {
 	console.log(`id on ${id} - vaiksem voi vordne 100`);
 }
 */
-
+/*
 const colour = "green";
 
 if(colour=="red") {
@@ -40,7 +40,7 @@ if(colour=="red") {
 } else {
 	console.log("colour is not accepted!");
 }
-
+*/
 // and - &&
 /*
 const name = "kadi";
@@ -69,3 +69,49 @@ if(id === 100)
 else
 	console.log(`ei ole korras`);
 
+const colour = "red";
+
+switch(colour) {
+	case "red":
+		console.log("Stop!");
+		break
+	case "yellow":
+		console.log("Attention");
+		break
+	case "green":
+		console.log("Go!");
+		break
+	default:
+		console.log(`This colour is not accepted`);
+}
+
+let kuupaev = new Date("10/03/2021");
+let nadalapaev = kuupaev.getDay();
+console.log(nadalapaev)
+
+switch(nadalapaev) {
+	case "1":
+		console.log(`tana on esmaspaev`);
+		break
+	case "2":
+		console.log(`tana on teisipaev`);
+		break
+	case "3":
+		console.log(`tana on kolmapaev`);
+		break
+	case "4":
+		console.log(`tana on neljapaev`);
+		break
+	case "5":
+		console.log(`tana on reede`);
+		break
+	case "6":
+		console.log(`tana on lauppaev`);
+		break
+	case "0":
+		console.log(`tana on puhapaev`);
+		break
+	default:
+		console.log(`Pole tavaline paev`);
+		break
+}

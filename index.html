@@ -3,11 +3,49 @@
         <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+                <!-- Compiled and minified CSS -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+                
                 <title>Js alused</title>
         </head>
         <body>
-                <h2>Js alused - tingimuslaused</h2>
-                <script src="funktsioon.js"></script>
+                <h2>Js alused - DOM</h2>
+                
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Task list</span>
+          <p>
+                <div class="row">
+                        <form id="Task form"
+                        method="get">
+                                <div class="input-field col s6">
+                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                <label for="first_name">New Task</label>
+                                </div>
+                                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="material-icons right"></i>
+                                </button>
+                        </form>
+                </div>
+          </p>
+        </div>
+        <div class="card-action">
+                <p>Task list content<p/>
+
+                <ul class="collection">
+                <li class="collection-item">Study JS<a href="X" class="brand-logo"> X</a></li>
+                <li class="collection-item">Study CSS<a href="X" class="brand-logo"> X</a></li>
+                <li class="collection-item">Study HTML<a href="X" class="brand-logo"> X</a></li>
+                <li class="collection-item">Be good<a href="X" class="brand-logo"> X</a></li>
+                </ul>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                <script src="event.js"></script>
         </body>
 </html>
 

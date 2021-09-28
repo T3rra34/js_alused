@@ -1,24 +1,32 @@
+//document getElementId();
 let val;
 
-val = document
-val = document.all
-val = document.all[3];
-val = document.all.length;
+val = document.getElementById("Task form");
+val = document.getElementById("Task form").id;
+val = document.getElementById("Task form").className;
 
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.forms;
-val = document.forms[0];
-val = document.forms.id;
-val = document.action;
-val = document.links[0].id;
-val= document.links[0].className;
-val = document.links[0].classList;
-val = document.scripts;
-val = document.scripts[1];
+const tasktitle = document.getElementById("Task form");
+
+
+//stiili muutmine
+tasktitle.style.background = "#383";
+tasktitle.style.color = "#337";
+tasktitle.style.padding = "5px";
+//tasktitle.style.display = "none";
+
+//text muutmine
+tasktitle.textContent = "My favourite tasks";
+tasktitle.innerText = "Medbay";
+tasktitle.innerHTML = "<span style='color:red'></span>"
+
+//document querrySelector
+val = document.querySelector("Task Form");
+val = document.querySelector('Task list');
+
+document.querySelector('li').style.color = "red";
+document.querySelector('ul li').style.color = "blue";
+document.querySelector('li:last-child').style.color = "red";
+document.querySelector('li:nth-child(even)').style.color ="green"
+document.querySelector('li:nth-child(odd)').style.color ="orange"
 
 console.log(val);

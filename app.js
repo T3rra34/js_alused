@@ -1,18 +1,26 @@
 // elemendi looming
-const list = document.querySelector(`ul`);
-// classi maaramine
-const li = document.createElement(`li`);
-li.classname = "collection-item";
+const form = document.querySelector(`form`);
+const taskInput = document.querySelector(`#task`);
+const heading = document.querySelector(`h4`);
 
-//texti lisamine
-li.appendChild(document.createTextNode(`Study element cration`));
+taskInput.value = '';
 
-const link = document.createElement(`a`);
-link.classname = `secondary-content`;
-link.setAttribute('href', '#');
-list.appendChild(link);
+//submit
+//form.addEventListener('Submit', runEvent);
 
-//elemendi lisamine teiste elemendi sisse
-list.appendChild(li);
+//keyboard
+//form.addEventListener('keyboard', runEvent);
+//form.addEventListener('keyup', runEvent);
 
-console.log(li);
+//input valja fokuseermine ja lahti fokuseermine
+//taskInput.addEventListener('keypress', runEvent);
+//taskInput.addEventListener('blue', runEvent);
+
+taskInput.addEventListener('cut', runEvent);
+taskInput.addEventListener('paste', runEvent);
+
+function runEvent(e) {
+	console.log(`Event type: ${e.type}`)
+	heading.innerText = e.target.value;
+	//e.preventDefault();
+}

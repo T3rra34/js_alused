@@ -1,41 +1,12 @@
-// elemendi looming
-const form = document.querySelector('form');
-const taskInput = document.querySelector('#task');
-const heading = document.querySelector('h4');
+// event elements
+const taskList = document.querySelector('ul')
 
-taskInput.value = '';
+// taskList.remove();
 
-//submit
-//form.addEventListener('Submit', runEvent);
+// click
+taskList.addEventListener('click', removeFromList)
 
-//keyboard
-//form.addEventListener('keyboard', runEvent);
-//form.addEventListener('keyup', runEvent);
-
-//input valja fokuseermine ja lahti fokuseermine
-//taskInput.addEventListener('keypress', runEvent);
-//taskInput.addEventListener('blue', runEvent);
-
-//taskInput.addEventListener('cut', runEvent);
-//taskInput.addEventListener('paste', runEvent);
-form.addEventListener('submit', AddTask);
-
-function AddTask(e) {
-	const li = document.createElement('li');
-	const list = document.querySelector('ul');
-
-	li.className = "collection-item"
-	li.appendChild(document.createTextNode(taskInput.value));
-
-	const link = document.createElement('a');
-	link.className = 'secondary-content';
-	link.appendChild(document.createTextNode("X"))
-	link.setAttribute('href', '#')
-
-	li.appendChild(link);
-	list.appendChild(li);
-
-	taskInput.value = "";
-
-	e.preventDefault();
+function removeFromList(e) {
+	const target = event.target.parentElement;
+	target.remove();
 }

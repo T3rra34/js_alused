@@ -1,12 +1,22 @@
 // event elements
-const taskList = document.querySelector('ul')
+const tasklist = document.querySelector('ul');
+const removelist = document.getElementById('removebtn');
 
-// taskList.remove();
+//click element kustutamiseks
+tasklist.addEventListener('click', deleteTask);
+removelist.addEventListener('click', deleteList);
 
-// click
-taskList.addEventListener('click', removeFromList)
-
-function removeFromList(e) {
-	const target = event.target.parentElement;
-	target.remove();
+function deleteTask(e) {
+	if(e.target.textContent = 'X') {
+		if(confirm('Kas olete kindel, et soovite kustudada?')) {
+			e.target.parentElement.remove();
+		}
+	}
+}
+function deleteList(e) {
+	if (confirm('Olete kindel, et tahate koike kustudada?')) {
+		if (e.target.id == 'removebtn') {
+			tasklist.innerHTML = '';
+		}
+	}
 }
